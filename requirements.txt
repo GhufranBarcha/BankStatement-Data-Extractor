@@ -1,4 +1,4 @@
-
+streamlit-pdf-viewer
 streamlit-chat
 streamlit-javascript
 pypdf
