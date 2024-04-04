@@ -1,0 +1,7 @@
+
+streamlit-chat
+streamlit-javascript
+pypdf
+streamlit==1.29.0
+PyPDF2
+openai
