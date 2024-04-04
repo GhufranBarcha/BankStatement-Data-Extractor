@@ -96,8 +96,9 @@ col1, col2 = st.columns(spec=[2, 1], gap="small")
 
 if uploaded_file:
     with col1:
-        if uploaded_file:
-             pdf_viewer(uploaded_file.getvalue())
+        with st.container(border = True)
+            if uploaded_file:
+                pdf_viewer(uploaded_file.getvalue())
 
     with col2:
         if data:
