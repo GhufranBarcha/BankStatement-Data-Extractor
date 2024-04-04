@@ -84,10 +84,10 @@ with st.sidebar:
         messages.append([{"role": "user", "content":prompt }])
         response = client.chat.completions.create(model="gpt-4", messages=[{"role": "user", "content":prompt }])
         data = response.choices[0].message.content
-        print(data)
+   
     if structured_text:
         
-        print(data)
+       
         data  = json.loads(data)
 
 
@@ -96,7 +96,7 @@ col1, col2 = st.columns(spec=[2, 1], gap="small")
 
 if uploaded_file:
     with col1:
-        with st.container(border = True)
+        with st.container(border = True):
             if uploaded_file:
                 pdf_viewer(uploaded_file.getvalue())
 
