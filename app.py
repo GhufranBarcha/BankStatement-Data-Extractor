@@ -62,14 +62,6 @@ if "past" not in st.session_state:
 def clear_submit():
     st.session_state["submit"] = False
 
-# Function to display PDF
-def displayPDF(upl_file, width):
-    # Read file as bytes
-    bytes_data = upl_file.getvalue()
-    base64_pdf = base64.b64encode(bytes_data).decode("utf-8", 'ignore')
-   
-    pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width={str(width)} height={str(width*4/3)} type="application/pdf"></iframe>'
-    st.markdown(pdf_display, unsafe_allow_html=True)
 
 # Sidebar upload and processing
 with st.sidebar:
@@ -106,8 +98,7 @@ if uploaded_file:
     with col1:
         if uploaded_file:
              pdf_viewer(uploaded_file.getvalue())
-        ui_width = st_javascript("window.innerWidth")
-        displayPDF(uploaded_file, ui_width - 10)
+
     with col2:
         if data:
             with st.expander("Get Customer Information"):
