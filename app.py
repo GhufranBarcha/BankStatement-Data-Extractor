@@ -102,7 +102,7 @@ if uploaded_file:
 
     with col2:
         if data:
-            with st.expander("Get Customer Information"):
+            with st.expander("Get Customer Information",expanded = True):
                 # st.subheader("Get information")
 
                 # Display extracted information
