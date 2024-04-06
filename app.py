@@ -106,7 +106,7 @@ if uploaded_file:
                 # st.subheader("Get information")
 
                 # Display extracted information
-                labels = ["Bank Name", "Customer Name", "IBAN", "Account Number", "Phone Number", "Salary", "Statement Balance", "Highest Spent Amount", "Highest Received Amount"]
+                labels = ["Bank Name", "Customer Name", "IBAN", "Account Number", "Phone Number", "Salary", "Statement Balance", "Highest Debited", "Highest Credited"]
                 for label, value in zip(labels, data):
                     st.markdown(f"<p style='font-family: Arial; color: black; font-size: 25px;'>{label}:</p>", unsafe_allow_html=True)
                     st.write(value)
