@@ -51,6 +51,16 @@ messages = []
 
 # App layout
 st.header("Your Bank Statement App")
+if uploaded_file == None:
+    st.write("""
+    This app helps you extract information from your bank statement PDF.
+    Upload your bank statement PDF file on the sidebar, and the app will extract 
+    information such as bank name, customer name, IBAN, account number, phone number, salary, 
+    statement balance, highest spent amount, and highest received amount.
+
+    Once you upload the PDF, the app will display the extracted information on the right side.
+
+    """)
 
 if "generated" not in st.session_state:
     st.session_state["generated"] = []
