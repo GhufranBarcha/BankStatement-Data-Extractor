@@ -25,6 +25,8 @@ def local_css(file_name):
 
 local_css("style.css")
 
+
+
 # Function to convert PDF to structured text
 def convert_pdf_to_structured_text(pdf_file):
     """Extracts text from a PDF file and returns it with basic formatting."""
@@ -46,21 +48,13 @@ def convert_pdf_to_structured_text(pdf_file):
 
 openai_api_key = st.secrets["API_KEY"]
 
+
 # Initializing messages list
 messages = []
 
 # App layout
 st.header("Your Bank Statement App")
-if uploaded_file == None:
-    st.write("""
-    This app helps you extract information from your bank statement PDF.
-    Upload your bank statement PDF file on the sidebar, and the app will extract 
-    information such as bank name, customer name, IBAN, account number, phone number, salary, 
-    statement balance, highest spent amount, and highest received amount.
 
-    Once you upload the PDF, the app will display the extracted information on the right side.
-
-    """)
 
 if "generated" not in st.session_state:
     st.session_state["generated"] = []
@@ -82,6 +76,7 @@ with st.sidebar:
         on_change=clear_submit,
         label_visibility = "hidden"
     )
+    
 
     # pdf_viewer(uploaded_file)
     structured_text = convert_pdf_to_structured_text(uploaded_file)
@@ -109,6 +104,9 @@ if uploaded_file:
         with st.container(border = True):
             if uploaded_file:
                 pdf_viewer(uploaded_file.getvalue())
+                
+                
+                
 
     with col2:
         if data:
@@ -120,3 +118,14 @@ if uploaded_file:
                 for label, value in zip(labels, data):
                     st.markdown(f"<p style='font-family: Arial; color: black; font-size: 25px;'>{label}:</p>", unsafe_allow_html=True)
                     st.write(value)
+if uploaded_file == None:
+    
+    st.write("""
+    This app helps you extract information from your bank statement PDF.
+    Upload your bank statement PDF file on the sidebar, and the app will extract 
+    information such as bank name, customer name, IBAN, account number, phone number, salary, 
+    statement balance, highest spent amount, and highest received amount.
+
+    Once you upload the PDF, the app will display the extracted information on the right side.
+
+    """)
