@@ -1,6 +1,12 @@
 # Bank Statement Data Extraction App
 
   This repository contains a Streamlit application powered by GPT, designed to extract data from bank statements in PDF format. The app utilizes the ChatGPT API to read and comprehend the bank statement, providing essential information such as the highest credit and debit amounts, total balance, customer name, account number, and more.
+  
+![Alt text](https://www.google.com/imgres?q=image&imgurl=https%3A%2F%2Fbuffer.com%2Flibrary%2Fcontent%2Fimages%2Fsize%2Fw1200%2F2023%2F10%2Ffree-images.jpg&imgrefurl=https%3A%2F%2Fbuffer.com%2Flibrary%2Ffree-images%2F&docid=U9G_8UXPMlqatM&tbnid=ivTDs79HInLVcM&vet=12ahUKEwitnJyz4cmFAxX91AIHHUoEAs4QM3oECHwQAA..i&w=1200&h=800&hcb=2&itg=1&ved=2ahUKEwitnJyz4cmFAxX91AIHHUoEAs4QM3oECHwQAA)  
+
+![Alt text](https://www.google.com/imgres?q=image&imgurl=https%3A%2F%2Fbuffer.com%2Flibrary%2Fcontent%2Fimages%2Fsize%2Fw1200%2F2023%2F10%2Ffree-images.jpg&imgrefurl=https%3A%2F%2Fbuffer.com%2Flibrary%2Ffree-images%2F&docid=U9G_8UXPMlqatM&tbnid=ivTDs79HInLVcM&vet=12ahUKEwitnJyz4cmFAxX91AIHHUoEAs4QM3oECHwQAA..i&w=1200&h=800&hcb=2&itg=1&ved=2ahUKEwitnJyz4cmFAxX91AIHHUoEAs4QM3oECHwQAA)  
+
+
 
 ## Key Features:
 
