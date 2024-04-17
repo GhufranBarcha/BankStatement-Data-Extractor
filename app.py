@@ -9,7 +9,7 @@ from openai import OpenAI
 
 
 # Setting Streamlit page configuration
-st.set_page_config(page_title="pdf-GPT", page_icon="📖", layout="wide")
+st.set_page_config(page_title="Bank-Statement-extractor", page_icon="📖", layout="wide")
 
 hide_streamlit_style = """
             <style>
@@ -53,7 +53,7 @@ openai_api_key = st.secrets["API_KEY"]
 messages = []
 
 # App layout
-st.header("Your Bank Statement App")
+st.header("Bank Statement Data Extractor App")
 
 
 if "generated" not in st.session_state:
